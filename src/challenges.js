@@ -5,13 +5,13 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
-//console.log('Requisito 1 - Comparar booleanos: '+compareTrue(true, true));
+// console.log('Requisito 1 - Comparar booleanos: '+compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
-//console.log('Requisito 2 - Área do triângulo: ' + calcArea(51, 1));
+// console.log('Requisito 2 - Área do triângulo: ' + calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
