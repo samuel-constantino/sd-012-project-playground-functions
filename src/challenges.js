@@ -8,9 +8,10 @@ function compareTrue(bool1, bool2) {
 //console.log('Requisito 1 - Comparar booleanos: '+compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2;
 }
+//console.log('Requisito 2 - Área do triângulo: ' + calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
