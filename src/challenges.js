@@ -1,14 +1,11 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  
-  if(bool1 && bool2){
+  if (bool1 && bool2) {
     return true;
-  }else{
-    return false;
-  };
-
-};
-console.log(compareTrue(true, true));
+  }
+  return false;
+}
+console.log("Requisito 1 - Comparar booleanos: "+compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
