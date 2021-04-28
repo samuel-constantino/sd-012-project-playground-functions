@@ -59,14 +59,22 @@ function highestCount(maiorNumero) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse < cat2 - mouse) {
+  let cat1ToMouse = cat1 - mouse;
+  let cat2ToMouse = cat2 - mouse;
+  if (cat1ToMouse < 0) {
+    cat1ToMouse = cat1ToMouse * (-1);
+  }
+  if (cat2ToMouse < 0) {
+    cat2ToMouse = cat2ToMouse * (-1);
+  }
+  if (cat1ToMouse < cat2ToMouse) {
     return 'cat1';
-  } else if (cat1 - mouse > cat2 - mouse) {
+  } else if (cat1ToMouse > cat2ToMouse) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
-// console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 4, 3));
+console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(listaDesafio08) {
@@ -166,8 +174,8 @@ function tecnologias(listaDeTecnologias, name) {
   }
   return listaDeObjetos;
 }
-let listaDeTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-console.log(tecnologias(listaDeTecnologias, 'Samuel'));
+// let listaDeTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+// console.log(tecnologias(listaDeTecnologias, 'Samuel'));
 
 module.exports = {
   calcArea,
