@@ -14,9 +14,10 @@ function calcArea(base, height) {
 // console.log('Requisito 2 - Área do triângulo: ' + calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(" ")
 }
+// console.log('Requisito 3: Fatiar string por espaços: ' + splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
