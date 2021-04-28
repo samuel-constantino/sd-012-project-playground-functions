@@ -53,19 +53,35 @@ console.log('Requisito 6 - identificar quantidade de repetições do maior núme
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse < cat2 - mouse){
+  if (cat1 - mouse < cat2 - mouse) {
     return 'cat1';
-  } else if (cat1 - mouse > cat2 - mouse){
+  } else if (cat1 - mouse > cat2 - mouse) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 4, 3));
+// console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 4, 3));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listaDesafio08) {
+  let resultado = [];
+  for(let value of listaDesafio08) {
+    if (value % 3 === 0) {
+      if (value % 5 === 0){
+        resultado.push('fizzBuzz');
+      } else {
+        resultado.push('fizz');
+      }
+    } else if (value % 5 === 0) {
+      resultado.push('Buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
+let listaDesafio08 = [2, 15, 7, 9, 45];
+// console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
 
 // Desafio 9
 function encode() {
