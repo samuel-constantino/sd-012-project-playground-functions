@@ -32,15 +32,21 @@ function footballPoints(wins, ties) {
 }
 // console.log('Requisito 5 - Quantidade de pontos no football: ' + footballPoints(1, 2));
 
-// Desafio 6
-function highestCount(listaDeNumeros) {
+function maiorNumero(listaDeNumeros){
   let maiorNumero = listaDeNumeros[0];
-  let numeroDeRepeticao = 0;
   for (let value of listaDeNumeros) {
     if(value > maiorNumero){
       maiorNumero = value;
     }
   }
+  return maiorNumero;
+}
+
+// Desafio 6
+function highestCount(maiorNumero) {
+  
+  let numeroDeRepeticao = 0;
+  
   for (let value of listaDeNumeros){
     if(value === maiorNumero){
       numeroDeRepeticao += 1;
@@ -49,7 +55,7 @@ function highestCount(listaDeNumeros) {
   return numeroDeRepeticao;
 }
 let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
-console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(listaDeNumeros));
+console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(maiorNumero(listaDeNumeros)));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -84,12 +90,65 @@ let listaDesafio08 = [2, 15, 7, 9, 45];
 // console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(fraseDesafioEncode) {
+  let listaDeLetras = fraseDesafioEncode.split("");
+  let fraseCodificada = "";
+  for (let key in listaDeLetras) {
+    switch (listaDeLetras[key]){
+      case 'a':
+        listaDeLetras[key] = 1;
+        break;
+      case 'e':
+        listaDeLetras[key] = 2;
+        break;
+      case 'i':
+        listaDeLetras[key] = 3;
+        break;
+      case 'o':
+        listaDeLetras[key] = 4;
+        break;
+      case 'u':
+        listaDeLetras[key] = 5;
+        break;
+    }
+    
+  }
+  for (let value of listaDeLetras) {
+    fraseCodificada += value;
+  }
+  return fraseCodificada;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('hi there!'));
+
+function decode(fraseDesafioDecode) {
+  let listaDeLetras = fraseDesafioDecode.split("");
+  let fraseDescodificada = "";
+  for (let key in listaDeLetras) {
+    switch (listaDeLetras[key]){
+      case '1':
+        listaDeLetras[key] = 'a';
+        break;
+      case '2':
+        listaDeLetras[key] = 'e';
+        break;
+      case '3':
+        listaDeLetras[key] = 'i';
+        break;
+      case '4':
+        listaDeLetras[key] = 'o';
+        break;
+      case '5':
+        listaDeLetras[key] = 'u';
+        break;
+    }
+    
+  }
+  for (let value of listaDeLetras) {
+    fraseDescodificada += value;
+  }
+  return fraseDescodificada;
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
