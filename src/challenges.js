@@ -43,7 +43,7 @@ function maiorNumero(listaDeNumeros){
 }
 
 // Desafio 6
-function highestCount(maiorNumero) {
+function highestCount(maiorNumero, listaDeNumeros) {
   
   let numeroDeRepeticao = 0;
   
@@ -54,8 +54,8 @@ function highestCount(maiorNumero) {
   }
   return numeroDeRepeticao;
 }
-// let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
-// console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(maiorNumero(listaDeNumeros)));
+ let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
+ console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(maiorNumero(listaDeNumeros), listaDeNumeros));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -94,8 +94,8 @@ function fizzBuzz(listaDesafio08) {
   }
   return resultado;
 }
- let listaDesafio08 = [9, 25];
- console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
+//let listaDesafio08 = [9, 25];
+// console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
 
 // Desafio 9
 function encode(fraseDesafioEncode) {
