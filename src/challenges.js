@@ -41,10 +41,8 @@ function maiorNumero(listaDeNumeros){
   }
   return maiorNumero;
 }
-
 // Desafio 6
 function highestCount(maiorNumero, listaDeNumeros) {
-  
   let numeroDeRepeticao = 0;
   
   for (let value of listaDeNumeros){
@@ -55,7 +53,7 @@ function highestCount(maiorNumero, listaDeNumeros) {
   return numeroDeRepeticao;
 }
  let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
- console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(maiorNumero(listaDeNumeros), listaDeNumeros));
+ console.log(highestCount(maiorNumero(listaDeNumeros), listaDeNumeros));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -94,7 +92,7 @@ function fizzBuzz(listaDesafio08) {
   }
   return resultado;
 }
-//let listaDesafio08 = [9, 25];
+// let listaDesafio08 = [9, 25];
 // console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
 
 // Desafio 9
@@ -165,7 +163,6 @@ function tecnologias(listaDeTecnologias, name) {
   let listaOrdenada = listaDeTecnologias.sort();
   let listaDeObjetos = [];
   for(let value of listaOrdenada) {
-    
     //objeto.tech = value;
     listaDeObjetos.push({
       tech: value,
