@@ -33,9 +33,23 @@ function footballPoints(wins, ties) {
 // console.log('Requisito 5 - Quantidade de pontos no football: ' + footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(listaDeNumeros) {
+  let maiorNumero = listaDeNumeros[0];
+  let numeroDeRepeticao = 0;
+  for (let value of listaDeNumeros) {
+    if(value > maiorNumero){
+      maiorNumero = value;
+    }
+  }
+  for (let value of listaDeNumeros){
+    if(value === maiorNumero){
+      numeroDeRepeticao += 1;
+    }
+  }
+  return numeroDeRepeticao;
 }
+let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
+console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(listaDeNumeros));
 
 // Desafio 7
 function catAndMouse() {
