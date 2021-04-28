@@ -54,8 +54,8 @@ function highestCount(maiorNumero) {
   }
   return numeroDeRepeticao;
 }
-let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
-console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(maiorNumero(listaDeNumeros)));
+// let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
+// console.log('Requisito 6 - identificar quantidade de repetições do maior número: ' + highestCount(maiorNumero(listaDeNumeros)));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -86,7 +86,7 @@ function fizzBuzz(listaDesafio08) {
   }
   return resultado;
 }
-let listaDesafio08 = [2, 15, 7, 9, 45];
+// let listaDesafio08 = [2, 15, 7, 9, 45];
 // console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
 
 // Desafio 9
@@ -94,7 +94,7 @@ function encode(fraseDesafioEncode) {
   let listaDeLetras = fraseDesafioEncode.split("");
   let fraseCodificada = "";
   for (let key in listaDeLetras) {
-    switch (listaDeLetras[key]){
+    switch (listaDeLetras[key]) {
       case 'a':
         listaDeLetras[key] = 1;
         break;
@@ -124,7 +124,7 @@ function decode(fraseDesafioDecode) {
   let listaDeLetras = fraseDesafioDecode.split("");
   let fraseDescodificada = "";
   for (let key in listaDeLetras) {
-    switch (listaDeLetras[key]){
+    switch (listaDeLetras[key]) {
       case '1':
         listaDeLetras[key] = 'a';
         break;
@@ -148,7 +148,26 @@ function decode(fraseDesafioDecode) {
   }
   return fraseDescodificada;
 }
-console.log(decode('h3 th2r2!'));
+// console.log(decode('h3 th2r2!'));
+
+function tecnologias(listaDeTecnologias, name) {
+  if (listaDeTecnologias.length === 0) {
+    return "Vazio!"
+  }
+  let listaOrdenada = listaDeTecnologias.sort();
+  let listaDeObjetos = [];
+  for(let value of listaOrdenada) {
+    
+    //objeto.tech = value;
+    listaDeObjetos.push({
+      tech: value,
+      name: name,
+    });
+  }
+  return listaDeObjetos;
+}
+let listaDeTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+console.log(tecnologias(listaDeTecnologias, 'Samuel'));
 
 module.exports = {
   calcArea,
