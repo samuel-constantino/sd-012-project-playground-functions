@@ -42,7 +42,7 @@ function maiorNumero(listaDeNumeros){
   return maiorNumero;
 }
 // Desafio 6
-function highestCount(maiorNumero, listaDeNumeros) {
+function highestCount(listaDeNumeros, maiorNumero) {
   let numeroDeRepeticao = 0;
   
   for (let value of listaDeNumeros){
@@ -52,8 +52,8 @@ function highestCount(maiorNumero, listaDeNumeros) {
   }
   return numeroDeRepeticao;
 }
- let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
- console.log(highestCount(maiorNumero(listaDeNumeros), listaDeNumeros));
+// let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
+ console.log(highestCount(listaDeNumeros, maiorNumero(listaDeNumeros)));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -158,12 +158,11 @@ function decode(fraseDesafioDecode) {
 
 function tecnologias(listaDeTecnologias, name) {
   if (listaDeTecnologias.length === 0) {
-    return "Vazio!"
+    return 'Vazio!';
   }
   let listaOrdenada = listaDeTecnologias.sort();
   let listaDeObjetos = [];
-  for(let value of listaOrdenada) {
-    //objeto.tech = value;
+  for (let value of listaOrdenada) {
     listaDeObjetos.push({
       tech: value,
       name: name,
