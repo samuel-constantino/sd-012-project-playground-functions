@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ")
+  return frase.split(' ');
 }
 // console.log('Requisito 3: Fatiar string por espaços: ' + splitSentence('go trybe'));
 
