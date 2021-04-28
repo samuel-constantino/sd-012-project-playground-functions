@@ -21,15 +21,16 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(listaDeNomes) {
-  return listaDeNomes[listaDeNomes.length-1] + ', ' + listaDeNomes[0];
+  return listaDeNomes[listaDeNomes.length - 1] + ', ' + listaDeNomes[0];
 }
 // let listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 // console.log('Requisito 4: concatenar itens de array em string: ' + concatName(listaDeNomes));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
+// console.log('Requisito 5 - Quantidade de pontos no football: ' + footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
