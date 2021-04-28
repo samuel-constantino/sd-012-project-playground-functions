@@ -5,7 +5,7 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
-console.log("Requisito 1 - Comparar booleanos: "+compareTrue(true, true));
+//console.log('Requisito 1 - Comparar booleanos: '+compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
