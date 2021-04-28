@@ -53,7 +53,7 @@ function highestCount(maiorNumero, listaDeNumeros) {
   return numeroDeRepeticao;
 }
 // let listaDeNumeros = [9, 1, 2, 3, 9, 5, 7];
- console.log(highestCount(maiorNumero(listaDeNumeros), listaDeNumeros));
+// console.log(highestCount(maiorNumero(listaDeNumeros), listaDeNumeros));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -101,23 +101,23 @@ function encode(fraseDesafioEncode) {
   let fraseCodificada = "";
   for (let key in listaDeLetras) {
     switch (listaDeLetras[key]) {
-      case 'a':
-        listaDeLetras[key] = 1;
-        break;
-      case 'e':
-        listaDeLetras[key] = 2;
-        break;
-      case 'i':
-        listaDeLetras[key] = 3;
-        break;
-      case 'o':
-        listaDeLetras[key] = 4;
-        break;
-      case 'u':
-        listaDeLetras[key] = 5;
-        break;
+    case 'a':
+      listaDeLetras[key] = 1;
+      break;
+    case 'e':
+      listaDeLetras[key] = 2;
+      break;
+    case 'i':
+      listaDeLetras[key] = 3;
+      break;
+    case 'o':
+      listaDeLetras[key] = 4;
+      break;
+    case 'u':
+      listaDeLetras[key] = 5;
+      break;
+    default :
     }
-    
   }
   for (let value of listaDeLetras) {
     fraseCodificada += value;
@@ -146,6 +146,7 @@ function decode(fraseDesafioDecode) {
     case '5':
       listaDeLetras[key] = 'u';
       break;
+    default :
     }
   }
   for (let value of listaDeLetras) {
