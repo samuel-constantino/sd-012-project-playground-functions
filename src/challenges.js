@@ -20,9 +20,11 @@ function splitSentence(frase) {
 // console.log('Requisito 3: Fatiar string por espaços: ' + splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaDeNomes) {
+  return listaDeNomes[listaDeNomes.length-1] + ', ' + listaDeNomes[0];
 }
+// let listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// console.log('Requisito 4: concatenar itens de array em string: ' + concatName(listaDeNomes));
 
 // Desafio 5
 function footballPoints() {
