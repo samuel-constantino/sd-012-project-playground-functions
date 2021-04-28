@@ -32,19 +32,15 @@ function footballPoints(wins, ties) {
 }
 // console.log('Requisito 5 - Quantidade de pontos no football: ' + footballPoints(1, 2));
 
-function maiorNumero(listaDeNumeros){
+// Desafio 6
+function highestCount(listaDeNumeros) {
+  let numeroDeRepeticao = 0;
   let maiorNumero = listaDeNumeros[0];
   for (let value of listaDeNumeros) {
     if(value > maiorNumero){
       maiorNumero = value;
     }
   }
-  return maiorNumero;
-}
-// Desafio 6
-function highestCount(maiorNumero, listaDeNumeros) {
-  let numeroDeRepeticao = 0;
-  
   for (let value of listaDeNumeros){
     if(value === maiorNumero){
       numeroDeRepeticao += 1;
