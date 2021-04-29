@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(listaDesafio08) {
   let resultado = [];
-  for(let value of listaDesafio08) {
+  for (let value of listaDesafio08) {
     if (value % 3 === 0) {
       if (value % 5 === 0){
         resultado.push('fizzBuzz');
