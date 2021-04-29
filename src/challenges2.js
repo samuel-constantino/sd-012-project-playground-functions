@@ -79,10 +79,13 @@ function hydrate(frase) {
   for (let key in numerosEmString) {
     numerosSomados += parseInt(numerosEmString[key]);
   }
+  if (numerosSomados > 1) {
+    return numerosSomados + ' copos de água';
+  }
+  return numerosSomados + ' copo de água';
   
-  return numerosSomados + ' copos de água';
 }
-console.log(hydrate("1 cerveja"));
+// console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
