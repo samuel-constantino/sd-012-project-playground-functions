@@ -39,9 +39,9 @@ function generatePhoneNumber(listaDeNumeros) {
   }
   let listaFormatada = '('
   for (let key in listaDeNumeros) {
-    if (key == 0) {
+    if (key === 0) {
       listaFormatada += listaDeNumeros[key];
-    } else if (key == 1) {
+    } else if (key === 1) {
       listaFormatada += listaDeNumeros[key] + ') '
     } else if (key > 1 && key <= 6){
       listaFormatada += listaDeNumeros[key];
