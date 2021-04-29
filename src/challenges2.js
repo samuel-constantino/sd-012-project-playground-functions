@@ -61,9 +61,9 @@ function generatePhoneNumber(listaDeNumeros) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triangulo = false;
-  medidaABC = (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC));
-  medidaBAC = (lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC));
-  medidaCAB = (lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB));
+  let medidaABC = (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC));
+  let medidaBAC = (lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC));
+  let medidaCAB = (lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB));
   if (medidaABC && medidaBAC && medidaCAB) {
     triangulo = true;
     return triangulo;
