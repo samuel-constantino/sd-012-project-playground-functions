@@ -55,13 +55,22 @@ function generatePhoneNumber(listaDeNumeros) {
   }
   return listaFormatada;
 }
-let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(listaDeNumeros));
+// let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(listaDeNumeros));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangulo = false;
+  medidaABC = (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC));
+  medidaBAC = (lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC));
+  medidaCAB = (lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB));
+  if (medidaABC && medidaBAC && medidaCAB) {
+    triangulo = true;
+    return triangulo;
+  }
+  return triangulo;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
