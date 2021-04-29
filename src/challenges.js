@@ -53,14 +53,8 @@ function highestCount(listaDeNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1ToMouse = cat1 - mouse;
-  let cat2ToMouse = cat2 - mouse;
-  if (cat1ToMouse < 0) {
-    cat1ToMouse *= (-1);
-  }
-  if (cat2ToMouse < 0) {
-    cat2ToMouse *= (-1);
-  }
+  let cat1ToMouse = Math.abs(cat1 - mouse);
+  let cat2ToMouse = Math.abs(cat2 - mouse);
   if (cat1ToMouse < cat2ToMouse) {
     return 'cat1';
   } else if (cat1ToMouse > cat2ToMouse) {
@@ -68,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-// console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 0, 2));
+ console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(listaDesafio08) {
