@@ -37,12 +37,12 @@ function highestCount(listaDeNumeros) {
   let numeroDeRepeticao = 0;
   let maiorNumero = listaDeNumeros[0];
   for (let value of listaDeNumeros) {
-    if(value > maiorNumero){
+    if (value > maiorNumero) {
       maiorNumero = value;
     }
   }
-  for (let value of listaDeNumeros){
-    if(value === maiorNumero){
+  for (let value of listaDeNumeros) {
+    if (value === maiorNumero) {
       numeroDeRepeticao += 1;
     }
   }
@@ -56,10 +56,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1ToMouse = cat1 - mouse;
   let cat2ToMouse = cat2 - mouse;
   if (cat1ToMouse < 0) {
-    cat1ToMouse = cat1ToMouse * (-1);
+    cat1ToMouse *= (-1);
   }
   if (cat2ToMouse < 0) {
-    cat2ToMouse = cat2ToMouse * (-1);
+    cat2ToMouse *= (-1);
   }
   if (cat1ToMouse < cat2ToMouse) {
     return 'cat1';
@@ -151,23 +151,6 @@ function decode(fraseDesafioDecode) {
   return fraseDescodificada;
 }
 // console.log(decode('h3 th2r2!'));
-
-function tecnologias(listaDeTecnologias, name) {
-  if (listaDeTecnologias.length === 0) {
-    return 'Vazio!';
-  }
-  let listaOrdenada = listaDeTecnologias.sort();
-  let listaDeObjetos = [];
-  for (let value of listaOrdenada) {
-    listaDeObjetos.push({
-      tech: value,
-      name: name,
-    });
-  }
-  return listaDeObjetos;
-}
-// let listaDeTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-// console.log(tecnologias(listaDeTecnologias, 'Samuel'));
 
 module.exports = {
   calcArea,
