@@ -62,18 +62,22 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
- console.log('Requisito 7: caça ao rato: ' + catAndMouse(1, 0, 2));
+console.log('Requisito 7: caça ao rato: ' + catAndMouse(-1, 0, 1));
 
 // Desafio 8
+
+function divisivelPorCinco(value){
+  if (value % 5 === 0){
+    return 'fizzBuzz';
+  } else {
+    return 'fizz';
+  }
+}
 function fizzBuzz(listaDesafio08) {
   let resultado = [];
   for (let value of listaDesafio08) {
     if (value % 3 === 0) {
-      if (value % 5 === 0){
-        resultado.push('fizzBuzz');
-      } else {
-        resultado.push('fizz');
-      }
+      resultado.push(divisivelPorCinco(value));
     } else if (value % 5 === 0) {
       resultado.push('buzz');
     } else {
@@ -82,13 +86,12 @@ function fizzBuzz(listaDesafio08) {
   }
   return resultado;
 }
-// let listaDesafio08 = [9, 25];
-// console.log('Requisito 8: FizzBuzz: ' + fizzBuzz(listaDesafio08));
+let listaDesafio08 = [10, 6, 7, 15];
+console.log(fizzBuzz(listaDesafio08));
 
 // Desafio 9
 function encode(fraseDesafioEncode) {
   let listaDeLetras = fraseDesafioEncode.split("");
-  let fraseCodificada = "";
   for (let key in listaDeLetras) {
     switch (listaDeLetras[key]) {
     case 'a':
@@ -109,12 +112,9 @@ function encode(fraseDesafioEncode) {
     default :
     }
   }
-  for (let value of listaDeLetras) {
-    fraseCodificada += value;
-  }
-  return fraseCodificada;
+  return listaDeLetras.join("");
 }
-// console.log(encode('hi there!'));
+console.log(encode('hi there!'));
 
 function decode(fraseDesafioDecode) {
   let listaDeLetras = fraseDesafioDecode.split("");

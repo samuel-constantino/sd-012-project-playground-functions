@@ -3,18 +3,20 @@ function techList(listaDeTecnologias, name) {
   if (listaDeTecnologias.length === 0) {
     return 'Vazio!';
   }
-  let listaOrdenada = listaDeTecnologias.sort();
+  // let listaOrdenada = listaDeTecnologias.sort();
   let listaDeObjetos = [];
-  for (let value of listaOrdenada) {
-    listaDeObjetos.push({
+  // percorre listaDeTecnologias ordenada
+  for (let value of listaDeTecnologias.sort()) {
+    listaDeObjetos.push(
+      {
       tech: value,
       name: name,
     });
   }
   return listaDeObjetos;
 }
-// let listaDeTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-// console.log(techList(listaDeTecnologias, 'Samuel'));
+let listaDeTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+console.log(techList(listaDeTecnologias, 'Samuel'));
 
 // Desafio 11
 function generatePhoneNumber(listaDeNumeros) {
@@ -37,23 +39,7 @@ function generatePhoneNumber(listaDeNumeros) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let listaFormatada = '('
-  for (let key in listaDeNumeros) {
-    if (key === 0) {
-      listaFormatada += listaDeNumeros[key];
-    } else if (key === 1) {
-      listaFormatada += listaDeNumeros[key] + ') '
-    } else if (key > 1 && key <= 6){
-      listaFormatada += listaDeNumeros[key];
-    } else if (key >= 7) {
-      if (key == 7) {
-        listaFormatada += '-' + listaDeNumeros[key];
-      } else {
-        listaFormatada += listaDeNumeros[key];
-      }
-    }
-  }
-  return listaFormatada;
+  return `(${listaDeNumeros[0]}${listaDeNumeros[1]}) ${listaDeNumeros[2]}${listaDeNumeros[3]}${listaDeNumeros[4]}${listaDeNumeros[5]}${listaDeNumeros[6]}-${listaDeNumeros[7]}${listaDeNumeros[8]}${listaDeNumeros[9]}${listaDeNumeros[10]}`;
 }
 // let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // console.log(generatePhoneNumber(listaDeNumeros));
